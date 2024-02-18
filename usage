@@ -1,0 +1,4 @@
+The package try_catcher provides CMake targets:
+
+    # This is just a single  header
+    find_package(try_catcher CONFIG REQUIRED)
