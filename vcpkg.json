@@ -1,0 +1,7 @@
+{
+    "name": "try-catcher",
+    "version": "1.0.0",
+    "description": "A  C++ header that uses the RAII pattern to simplify catching and reporting errors for a sequence of steps, throwing all accumulated exception messages as a single exception when going out of scope.",
+    "homepage": "https://github.com/barnarddale/try-catcher",
+    "license": "MIT"
+}
