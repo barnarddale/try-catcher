@@ -3,8 +3,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO barnarddale/try-catcher
-    REF f8f6bf553efae7d808ff37d473cbcbf4b1ba0a5d
-    SHA512 0
+    REF c8d456dadb49335353920d9aa316326475140d3d
+    SHA512 7b4c29f06aa90133cca37e9d1d9218bce99c4fe410e5732c70b016bc1a2d17a6a462a9f3ae62ed3ccebff763dfe1d57642981af1896dcc3b4d803df6c3a34a30
     HEAD_REF main
 )
 
