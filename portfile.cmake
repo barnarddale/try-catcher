@@ -7,4 +7,4 @@ vcpkg_from_github(
 )
 
 # This is a header-only modern C++ package.
-file(INSTALL "${SOURCE_PATH}/try_catcher.h" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+file(INSTALL "${SOURCE_PATH}/TryCatcher.h" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
