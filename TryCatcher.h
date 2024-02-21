@@ -108,11 +108,12 @@ namespace DB
         }
 
         /// <summary>
-        ///     <para>This is the primary purpose of using a TryCatcher. It immediately (synchronously)
+        ///     <para>This method is the heart of TryCatcher. It immediately (and synchronously in the same thread)
         ///     runs the given function (typically a lambda function) in a try-catch block and catches
         ///     any and all types of exceptions. If it catches an exception derived from std::exception,
         ///     then it accumulates the e.what() message, separated by newline. If it catches
         ///     any other exception type, it adds an "Unknown exception." message.</para>
+        ///     <para></para>
         ///     <para>NOTE: If ANY exceptions deriving from std::bad_alloc are caught, then the
         ///     TryCatcher::~TryCatcher destructor will throw an out_of_memory_error
         ///     instead of a std::runtime_error. This allows your app to handle out-of-memory
@@ -139,9 +140,9 @@ namespace DB
             }
         }
 
-        /// <summary>Add a message to the accumulated messages. It will be separated
+        /// <summary>Add a message to any accumulated messages. It will be separated
         /// with a newline. This will force an exception to be thrown when TryCatcher goes
-        /// out of scope. </summary>
+        /// out of scope.</summary>
         auto AddMessage(const std::string& message) -> void
         {
             m_accumulatedMessages << message << '\n';
@@ -149,6 +150,7 @@ namespace DB
 
         /// <summary>
         ///     <para>Retrieve any accumulated messages.</para>
+        ///     <para></para>
         ///     <para>It is not normally necessary to do this because they will be automatically thrown
         ///     from the destructor as a std::runtime_error exception.</para>
         /// </summary>
