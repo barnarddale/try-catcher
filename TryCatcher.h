@@ -1,6 +1,7 @@
 #pragma once
 
 #include <functional>
+#include <new>
 #include <sstream>
 
 // ReSharper disable CppInconsistentNaming
